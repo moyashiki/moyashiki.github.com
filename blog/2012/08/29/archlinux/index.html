@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>すばらしき最初の記事 - おちんクルミ</title>
+  <title>arch linuxにsudo - おちんクルミ</title>
   <meta name="author" content="moyashiki">
 
   
-  <meta name="description" content="ナニ書いたらいいかわかんない（ゝω・）vｷｬﾋﾟ☆
-">
+  <meta name="description" content="というわけで自宅サーバーのディストリビューションはarch linuxです.そこにsudoを入れましょうという話ですね.
+普通にpacmanかyaourtで入れましょう. yaourt -S sudo これで簡単導入です.あと設定をいじりましょう. visudo &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://maji.kuroknee.so/blog/2012/08/25/unko/">
+  <link rel="canonical" href="http://maji.kuroknee.so/blog/2012/08/29/archlinux/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">すばらしき最初の記事</h1>
+      <h1 class="entry-title">Arch Linuxにsudo</h1>
     
     
       <p class="meta">
@@ -84,14 +84,31 @@
   
 
 
-<time datetime="2012-08-25T22:58:00+09:00" pubdate data-updated="true">Aug 25<span>th</span>, 2012</time>
+<time datetime="2012-08-29T15:15:00+09:00" pubdate data-updated="true">Aug 29<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>ナニ書いたらいいかわかんない（ゝω・）vｷｬﾋﾟ☆</p>
+<div class="entry-content"><p>というわけで自宅サーバーのディストリビューションはarch linuxです.そこにsudoを入れましょうという話ですね.
+普通にpacmanかyaourtで入れましょう.</p>
+
+<pre><code>yaourt -S sudo 
+</code></pre>
+
+<p>これで簡単導入です.あと設定をいじりましょう.</p>
+
+<pre><code>visudo
+</code></pre>
+
+<p>設定ファイルが開きますのでいじります.自分はwheelグループだったらパスワード無しでいじれるようにしたいので,</p>
+
+<pre><code>## Same thing without a password
+%wheel ALL=(ALL) NOPASSWD: ALL
+</code></pre>
+
+<p>の所のコメントを解除します.</p>
 </div>
 
 
@@ -114,15 +131,21 @@
   
 
 
-<time datetime="2012-08-25T22:58:00+09:00" pubdate data-updated="true">Aug 25<span>th</span>, 2012</time>
+<time datetime="2012-08-29T15:15:00+09:00" pubdate data-updated="true">Aug 29<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/archlinux/'>archlinux</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://maji.kuroknee.so/blog/2012/08/25/unko/" data-via="" data-counturl="http://maji.kuroknee.so/blog/2012/08/25/unko/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://maji.kuroknee.so/blog/2012/08/29/archlinux/" data-via="" data-counturl="http://maji.kuroknee.so/blog/2012/08/29/archlinux/" >Tweet</a>
   
   
   
@@ -131,8 +154,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/08/26/sys/" title="Previous Post: System Verilogでアサーションを書く">&laquo; System Verilogでアサーションを書く</a>
       
-        <a class="basic-alignment right" href="/blog/2012/08/26/sys/" title="Next Post: System Verilogでアサーションを書く">System Verilogでアサーションを書く &raquo;</a>
       
     </p>
   </footer>

@@ -9,9 +9,8 @@
   <meta name="author" content="moyashiki">
 
   
-  <meta name="description" content="assertion (&lt;条件式>);
-終わり
-">
+  <meta name="description" content="というわけで自宅サーバーのディストリビューションはarch linuxです.そこにsudoを入れましょうという話ですね.
+普通にpacmanかyaourtで入れましょう. yaourt -S sudo これで簡単導入です.あと設定をいじりましょう. visudo &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,59 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/29/archlinux/">Arch Linuxにsudo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-29T15:15:00+09:00" pubdate data-updated="true">Aug 29<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>というわけで自宅サーバーのディストリビューションはarch linuxです.そこにsudoを入れましょうという話ですね.
+普通にpacmanかyaourtで入れましょう.</p>
+
+<pre><code>yaourt -S sudo 
+</code></pre>
+
+<p>これで簡単導入です.あと設定をいじりましょう.</p>
+
+<pre><code>visudo
+</code></pre>
+
+<p>設定ファイルが開きますのでいじります.自分はwheelグループだったらパスワード無しでいじれるようにしたいので,</p>
+
+<pre><code>## Same thing without a password
+%wheel ALL=(ALL) NOPASSWD: ALL
+</code></pre>
+
+<p>の所のコメントを解除します.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -151,6 +203,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/29/archlinux/">arch linuxにsudo</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/08/26/sys/">System Verilogでアサーションを書く</a>

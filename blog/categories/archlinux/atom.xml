@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[おちんクルミ]]></title>
-  <link href="http://maji.kuroknee.so/atom.xml" rel="self"/>
+  <title><![CDATA[Category: archlinux | おちんクルミ]]></title>
+  <link href="http://maji.kuroknee.so/blog/categories/archlinux/atom.xml" rel="self"/>
   <link href="http://maji.kuroknee.so/"/>
   <updated>2012-08-29T15:26:11+09:00</updated>
   <id>http://maji.kuroknee.so/</id>
@@ -36,25 +36,6 @@
 </code></pre>
 
 <p>の所のコメントを解除します.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[System Verilogでアサーションを書く]]></title>
-    <link href="http://maji.kuroknee.so/blog/2012/08/26/sys/"/>
-    <updated>2012-08-26T14:18:00+09:00</updated>
-    <id>http://maji.kuroknee.so/blog/2012/08/26/sys</id>
-    <content type="html"><![CDATA[<p>assertion (&lt;条件式>);
-終わり</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[すばらしき最初の記事]]></title>
-    <link href="http://maji.kuroknee.so/blog/2012/08/25/unko/"/>
-    <updated>2012-08-25T22:58:00+09:00</updated>
-    <id>http://maji.kuroknee.so/blog/2012/08/25/unko</id>
-    <content type="html"><![CDATA[<p>ナニ書いたらいいかわかんない（ゝω・）vｷｬﾋﾟ☆</p>
 ]]></content>
   </entry>
   

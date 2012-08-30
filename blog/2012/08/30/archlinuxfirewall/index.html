@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>System Verilogでアサーションを書く - おちんクルミ</title>
+  <title>Arch Linuxでiptablesではまった件 - おちんクルミ</title>
   <meta name="author" content="moyashiki">
 
   
-  <meta name="description" content="assertion (&lt;条件式>);
-終わり
-">
+  <meta name="description" content="というわけではまりました.直接見えるところに置くことになったのでiptablesを書いていました.もちろんiptablesの資産などありませんので,素晴らしいチートシートを用いました.
+qiita.com/items/5c4e21fa284497782f71
+こちらを改変して, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://maji.kuroknee.so/blog/2012/08/26/sys/">
+  <link rel="canonical" href="http://maji.kuroknee.so/blog/2012/08/30/archlinuxfirewall/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -69,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">System Verilogでアサーションを書く</h1>
+      <h1 class="entry-title">Arch Linuxでiptablesではまった件</h1>
     
     
       <p class="meta">
@@ -85,15 +85,23 @@
   
 
 
-<time datetime="2012-08-26T14:18:00+09:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time>
+<time datetime="2012-08-30T22:22:00+09:00" pubdate data-updated="true">Aug 30<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>assertion (&lt;条件式>);
-終わり</p>
+<div class="entry-content"><p>というわけではまりました.直接見えるところに置くことになったのでiptablesを書いていました.もちろんiptablesの資産などありませんので,素晴らしいチートシートを用いました.
+qiita.com/items/5c4e21fa284497782f71
+こちらを改変して,sshしか通さない設定にして適用しました.</p>
+
+<p>この後,mysqlでもインストールしよっかな…とyaourt -S mysqlを打ち込んでも全く帰ってきません.
+何故かと思い,ping google.comをすれば同様に帰ってこない.</p>
+
+<p>というわけでDNSも閉じたのは悪かったようですね.
+  # iptables -A UDP -p udp &#8211;dport 53 -j ACCEPT
+こんな感じでルール追加してあげたら元に戻ったので安心ですね.</p>
 </div>
 
 
@@ -116,15 +124,21 @@
   
 
 
-<time datetime="2012-08-26T14:18:00+09:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time>
+<time datetime="2012-08-30T22:22:00+09:00" pubdate data-updated="true">Aug 30<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/arch-linux/'>arch linux</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://maji.kuroknee.so/blog/2012/08/26/sys/" data-via="" data-counturl="http://maji.kuroknee.so/blog/2012/08/26/sys/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://maji.kuroknee.so/blog/2012/08/30/archlinuxfirewall/" data-via="" data-counturl="http://maji.kuroknee.so/blog/2012/08/30/archlinuxfirewall/" >Tweet</a>
   
   
   
@@ -133,10 +147,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/08/25/unko/" title="Previous Post: すばらしき最初の記事">&laquo; すばらしき最初の記事</a>
+        <a class="basic-alignment left" href="/blog/2012/08/29/archlinux/" title="Previous Post: arch linuxにsudo">&laquo; arch linuxにsudo</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/08/29/archlinux/" title="Next Post: arch linuxにsudo">arch linuxにsudo &raquo;</a>
       
     </p>
   </footer>

@@ -9,8 +9,9 @@
   <meta name="author" content="moyashiki">
 
   
-  <meta name="description" content="というわけで自宅サーバーのディストリビューションはarch linuxです.そこにsudoを入れましょうという話ですね.
-普通にpacmanかyaourtで入れましょう. yaourt -S sudo これで簡単導入です.あと設定をいじりましょう. visudo &hellip;">
+  <meta name="description" content="というわけではまりました.直接見えるところに置くことになったのでiptablesを書いていました.もちろんiptablesの資産などありませんので,素晴らしいチートシートを用いました.
+qiita.com/items/5c4e21fa284497782f71
+こちらを改変して, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +66,51 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/08/30/archlinuxfirewall/">Arch Linuxでiptablesではまった件</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-30T22:22:00+09:00" pubdate data-updated="true">Aug 30<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>というわけではまりました.直接見えるところに置くことになったのでiptablesを書いていました.もちろんiptablesの資産などありませんので,素晴らしいチートシートを用いました.
+qiita.com/items/5c4e21fa284497782f71
+こちらを改変して,sshしか通さない設定にして適用しました.</p>
+
+<p>この後,mysqlでもインストールしよっかな…とyaourt -S mysqlを打ち込んでも全く帰ってきません.
+何故かと思い,ping google.comをすれば同様に帰ってこない.</p>
+
+<p>というわけでDNSも閉じたのは悪かったようですね.
+  # iptables -A UDP -p udp &#8211;dport 53 -j ACCEPT
+こんな感じでルール追加してあげたら元に戻ったので安心ですね.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -203,6 +249,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/30/archlinuxfirewall/">Arch Linuxでiptablesではまった件</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/08/29/archlinux/">arch linuxにsudo</a>

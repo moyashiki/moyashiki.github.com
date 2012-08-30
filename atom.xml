@@ -4,7 +4,7 @@
   <title><![CDATA[おちんクルミ]]></title>
   <link href="http://maji.kuroknee.so/atom.xml" rel="self"/>
   <link href="http://maji.kuroknee.so/"/>
-  <updated>2012-08-30T22:28:46+09:00</updated>
+  <updated>2012-08-30T22:36:26+09:00</updated>
   <id>http://maji.kuroknee.so/</id>
   <author>
     <name><![CDATA[moyashiki]]></name>
@@ -18,16 +18,36 @@
     <link href="http://maji.kuroknee.so/blog/2012/08/30/archlinuxfirewall/"/>
     <updated>2012-08-30T22:22:00+09:00</updated>
     <id>http://maji.kuroknee.so/blog/2012/08/30/archlinuxfirewall</id>
-    <content type="html"><![CDATA[<p>というわけではまりました.直接見えるところに置くことになったのでiptablesを書いていました.もちろんiptablesの資産などありませんので,素晴らしいチートシートを用いました.
-qiita.com/items/5c4e21fa284497782f71
-こちらを改変して,sshしか通さない設定にして適用しました.</p>
+    <content type="html"><![CDATA[<p>というわけではまりました.直接見えるところに置くことになったのでiptablesを書いていました.もちろんiptablesの資産などありませんので,素晴らしい<a href="http://qiita.com/items/5c4e21fa284497782f71">チートシート</a>を用いました.ありがとうございます.</p>
 
-<p>この後,mysqlでもインストールしよっかな…とyaourt -S mysqlを打ち込んでも全く帰ってきません.
-何故かと思い,ping google.comをすれば同様に帰ってこない.</p>
+<p>こちらを改変してsshしか通さない設定にして適用しました.</p>
 
-<p>というわけでDNSも閉じたのは悪かったようですね.
-  # iptables -A UDP -p udp &#8211;dport 53 -j ACCEPT
-こんな感じでルール追加してあげたら元に戻ったので安心ですね.</p>
+<p>この後,mysqlでもインストールしよっかな…と</p>
+
+<pre><code>yaourt -S mysql
+</code></pre>
+
+<p>を打ち込んでも全く帰ってきません.
+何故かと思い,</p>
+
+<pre><code>ping google.com
+</code></pre>
+
+<p>をすれば同様に帰ってこない.</p>
+
+<p>しかし,</p>
+
+<pre><code>ping 213.21.xx.x
+</code></pre>
+
+<p>みたいな感じだと大丈夫.</p>
+
+<p>というわけでDNSに問題が生じていると考えました.閉じたのは悪かったようですね.</p>
+
+<pre><code># iptables -A UDP -p udp --dport 53 -j ACCEPT
+</code></pre>
+
+<p>こんな感じでルール追加してあげたら元に戻ったので安心ですね.</p>
 ]]></content>
   </entry>
   

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | おちんクルミ]]></title>
+  <link href="http://maji.kuroknee.so/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://maji.kuroknee.so/"/>
+  <updated>2012-09-06T01:00:23+09:00</updated>
+  <id>http://maji.kuroknee.so/</id>
+  <author>
+    <name><![CDATA[moyashiki]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[RubyMotion始めてる]]></title>
+    <link href="http://maji.kuroknee.so/blog/2012/09/06/rubymotion/"/>
+    <updated>2012-09-06T00:55:00+09:00</updated>
+    <id>http://maji.kuroknee.so/blog/2012/09/06/rubymotion</id>
+    <content type="html"><![CDATA[<p>というわけで縁があってRubyMotionしてます.Rubyを書いたことはあるけれども,Objective-Cは書いたことが無いのでどんな風に書いていけばいまいちわかんない.iOSのMVCもいまいち理解できてない.</p>
+
+<p>とりあえずStoryBoardが便利なので,これを元にしてやっていこうと思います.
+で,StoryBoardで配置したUILableとかのインスタンスをどうやって取得出来るのかが分からなかった.</p>
+
+<p>とりあえず,Storyboard側でTagを設定しておいて,コード側で</p>
+
+<pre><code>viewWithTag(Tag)
+</code></pre>
+
+<p>で取得出来ることがワカッタのでなんとかなりそう.</p>
+]]></content>
+  </entry>
+  
+</feed>

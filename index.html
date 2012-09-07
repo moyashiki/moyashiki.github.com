@@ -9,7 +9,7 @@
   <meta name="author" content="moyashiki">
 
   
-  <meta name="description" content="というわけで縁があってRubyMotionしてます.Rubyを書いたことはあるけれども,Objective-Cは書いたことが無いのでどんな風に書いていけばいまいちわかんない.iOSのMVCもいまいち理解できてない. とりあえずStoryBoardが便利なので,これを元にしてやっていこうと思います &hellip;">
+  <meta name="description" content="というわけで,RubyMotionです.実際開発するのって,StoryBoard使ってやるかコードでがりがり書くかどうすればよろしいのですか? さておき,強制的に横向きで自分は使って欲しいのです.どうやったらできるかなーと調べたところ,こんな感じでやれば良いとのこと. UIApplication. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,50 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/08/title/">RubyMotionで強制的に横向き(Landscape)にする</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-08T01:23:00+09:00" pubdate data-updated="true">Sep 8<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>というわけで,RubyMotionです.実際開発するのって,StoryBoard使ってやるかコードでがりがり書くかどうすればよろしいのですか?</p>
+
+<p>さておき,強制的に横向きで自分は使って欲しいのです.どうやったらできるかなーと調べたところ,こんな感じでやれば良いとのこと.</p>
+
+<pre><code>    UIApplication.sharedApplication.setStatusBarOrientation(UIInterfaceOrientationLandscapeRight)
+</code></pre>
+
+<p>参考にしたのはこちらのサイトです.
+http://kumokiri2k.seesaa.net/article/173086294.html</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -315,6 +359,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/08/title/">RubyMotionで強制的に横向き(Landscape)にする</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/09/06/rubymotion/">RubyMotion始めてる</a>
       </li>
     
@@ -328,10 +376,6 @@
     
       <li class="post">
         <a href="/blog/2012/08/26/sys/">System Verilogでアサーションを書く</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/25/unko/">すばらしき最初の記事</a>
       </li>
     
   </ul>

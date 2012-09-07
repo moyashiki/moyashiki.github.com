@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: arch linux - おちんクルミ</title>
+  <title>RubyMotionで強制的に横向き(Landscape)にする - おちんクルミ</title>
   <meta name="author" content="moyashiki">
 
   
-  <meta name="description" content="Category: arch linux">
+  <meta name="description" content="というわけで,RubyMotionです.実際開発するのって,StoryBoard使ってやるかコードでがりがり書くかどうすればよろしいのですか? さておき,強制的に横向きで自分は使って欲しいのです.どうやったらできるかなーと調べたところ,こんな感じでやれば良いとのこと. UIApplication. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://maji.kuroknee.soblog/categories/arch-linux/">
+  <link rel="canonical" href="http://maji.kuroknee.so/blog/2012/09/08/title/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -63,35 +63,92 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Arch Linux</h1>
+    
+      <h1 class="entry-title">RubyMotionで強制的に横向き(Landscape)にする</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-08T01:23:00+09:00" pubdate data-updated="true">Sep 8<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>というわけで,RubyMotionです.実際開発するのって,StoryBoard使ってやるかコードでがりがり書くかどうすればよろしいのですか?</p>
 
-  
-  <h2>2012</h2>
+<p>さておき,強制的に横向きで自分は使って欲しいのです.どうやったらできるかなーと調べたところ,こんな感じでやれば良いとのこと.</p>
 
-<article>
-  
-<h1><a href="/blog/2012/08/30/archlinuxfirewall/">Arch Linuxでiptablesではまった件</a></h1>
-<time datetime="2012-08-30T22:22:00+09:00" pubdate><span class='month'>Aug</span> <span class='day'>30</span> <span class='year'>2012</span></time>
+<pre><code>    UIApplication.sharedApplication.setStatusBarOrientation(UIInterfaceOrientationLandscapeRight)
+</code></pre>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/arch-linux/'>arch linux</a></span>
-</footer>
-
-
-</article>
-
+<p>参考にしたのはこちらのサイトです.
+http://kumokiri2k.seesaa.net/article/173086294.html</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">moyashiki</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-08T01:23:00+09:00" pubdate data-updated="true">Sep 8<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/rubymotion/'>RubyMotion</a>, <a class='category' href='/blog/categories/ios/'>iOS</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://maji.kuroknee.so/blog/2012/09/08/title/" data-via="" data-counturl="http://maji.kuroknee.so/blog/2012/09/08/title/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/09/06/rubymotion/" title="Previous Post: RubyMotion始めてる">&laquo; RubyMotion始めてる</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
